@@ -6,9 +6,12 @@ class Value:
         return
 
     def __get__(self, instance, owner):
+        import pdb
+        pdb.set_trace()
         return self.value
 
     def __set__(self, instance, value):
+
         self.value = value * (1 - instance.commission)
         return
 
